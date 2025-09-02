@@ -4,78 +4,175 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tower Blocks — Play Now.</title>
-    <meta name="description" content="Tower Blocks: a block-stacking web game with a global online leaderboard, how-to video, and project links." />
-    <meta property="og:title" content="Tower Blocks — Stack higher. Score higher." />
-    <meta property="og:description" content="Compete on the global leaderboard and learn how it's built." />
+    <meta
+      name="description"
+      content="Tower Blocks: a block-stacking web game with a global online leaderboard, how-to video, and project links."
+    />
+    <meta
+      property="og:title"
+      content="Tower Blocks — Stack higher. Score higher."
+    />
+    <meta
+      property="og:description"
+      content="Compete on the global leaderboard and learn how it's built."
+    />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="favicon.ico" />
     <link rel="preconnect" href="https://9uaqltej2.g.k8s.cyou" crossorigin />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="preconnect" href="https://www.youtube-nocookie.com" crossorigin />
+    <link
+      rel="preconnect"
+      href="https://www.youtube-nocookie.com"
+      crossorigin
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="manifest" href="manifest.json" />
+    <!-- Facebook Meta Tags -->
+    <meta
+      property="og:url"
+      content="https://taubyte.github.io/tower-blocks-game"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Tower Blocks — Stack higher. Score higher."
+    />
+    <meta
+      property="og:description"
+      content="Compete on the global leaderboard and learn how it's built."
+    />
+    <meta
+      property="og:image"
+      content="https://opengraph.b-cdn.net/production/images/0489f984-4d89-4074-ae63-40a2286a39be.png?token=eQdqsURbbXNPhpMjmJcKGGFmtvV0uRASip77lxKNQtI&height=497&width=855&expires=33292825022"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="taubyte.github.io" />
+    <meta
+      property="twitter:url"
+      content="https://taubyte.github.io/tower-blocks-game"
+    />
+    <meta
+      name="twitter:title"
+      content="Tower Blocks — Stack higher. Score higher."
+    />
+    <meta
+      name="twitter:description"
+      content="Compete on the global leaderboard and learn how it's built."
+    />
+    <meta
+      name="twitter:image"
+      content="https://opengraph.b-cdn.net/production/images/0489f984-4d89-4074-ae63-40a2286a39be.png?token=eQdqsURbbXNPhpMjmJcKGGFmtvV0uRASip77lxKNQtI&height=497&width=855&expires=33292825022"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-KHQN12V0WF"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-KHQN12V0WF");
+    </script>
+
     <link rel="stylesheet" href="styles.css" />
     <!-- Plyr: elegant, accessible media player -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.css"
+    />
   </head>
   <body>
     <div class="global-ornaments" aria-hidden="true"></div>
 
-    <!-- Floating action button for external links -->
-    <div class="fab-container" aria-label="Quick links">
-      <button id="fab-toggle" class="fab" aria-expanded="false" aria-controls="fab-menu" aria-label="Open links">🔗</button>
-      <div id="fab-menu" class="fab-menu" role="menu">
-        <a role="menuitem" class="fab-link" href="https://github.com/taubyte" target="_blank" rel="noopener noreferrer">🐙 GitHub ↗</a>
-        <a role="menuitem" class="fab-link" href="https://www.youtube.com/@taubyte" target="_blank" rel="noopener noreferrer">▶️ YouTube ↗</a>
-        <a role="menuitem" class="fab-link" href="https://tau.how" target="_blank" rel="noopener noreferrer">📚 Docs ↗</a>
-        <a role="menuitem" class="fab-link" href="https://taubyte.com" target="_blank" rel="noopener noreferrer">🌐 Website ↗</a>
-      </div>
-    </div>
-
     <!-- Section 1: Hero with dimmed gameplay video background -->
     <section id="hero" class="section section-hero">
       <div class="video-bg">
-        <video id="bg-video" playsinline autoplay muted loop preload="auto" poster="poster.jpg" aria-hidden="true">
+        <video
+          id="bg-video"
+          playsinline
+          autoplay
+          muted
+          loop
+          preload="auto"
+          poster="poster.jpg"
+          aria-hidden="true"
+        >
           <!-- Placeholder video; replace with your gameplay video URL or local file -->
-          <source src="https://cdn.coverr.co/videos/coverr-sunlight-through-trees-1448/1080p.mp4" type="video/mp4" />
-          <source src="https://cdn.coverr.co/videos/coverr-sunlight-through-trees-1448/1080p.webm" type="video/webm" />
         </video>
         <div class="video-overlay"></div>
       </div>
       <div class="container hero-content reveal">
         <h1 class="title">Tower Blocks</h1>
-        <p class="subtitle">Stack higher. Score higher. Climb the global leaderboard.</p>
+        <p class="subtitle">
+          Stack higher. Score higher. Climb the global leaderboard.
+        </p>
         <div class="hero-grid">
           <div class="play-card with-gradient-border reveal">
             <div class="play-card-video" aria-hidden="true">
               <video playsinline autoplay muted loop preload="auto">
-                <source src="bg.mp4" type="video/mp4" />
-                <source src="bg.webm" type="video/webm" />
+                <source src="assets/bg.webm" type="video/webm" />
                 Your browser does not support the video tag.
               </video>
               <div class="play-card-dim"></div>
             </div>
             <div class="play-card-inner">
               <h2>Ready to Play?</h2>
-              <p class="play-card-text">Stack blocks with perfect timing and climb the board.</p>
-              <a class="btn btn-lg primary ripple-container" href="https://9uaqltej2.g.k8s.cyou/" target="_blank" rel="noopener noreferrer">Play Now</a>
+              <p class="play-card-text">
+                Stack blocks with perfect timing and climb the board.
+              </p>
+              <a
+                class="btn btn-lg primary ripple-container"
+                href="https://9uaqltej2.g.k8s.cyou/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Play Now</a
+              >
             </div>
           </div>
           <div class="leaderboard with-gradient-border reveal" id="leaderboard">
             <h2>Global Leaderboard</h2>
             <div class="board-actions">
-              <button class="btn small ghost" id="refresh-board" type="button">Refresh</button>
-              <button class="btn small ghost" id="view-full-board" type="button">View full board</button>
+              <button class="btn small ghost" id="refresh-board" type="button">
+                Refresh
+              </button>
+              <button
+                class="btn small ghost"
+                id="view-full-board"
+                type="button"
+              >
+                View full board
+              </button>
             </div>
             <div id="leaderboard-content" class="board">
               <div class="skeleton">
-                <div class="row"><div class="cell sk"></div><div class="cell sk"></div></div>
-                <div class="row"><div class="cell sk"></div><div class="cell sk"></div></div>
-                <div class="row"><div class="cell sk"></div><div class="cell sk"></div></div>
-                <div class="row"><div class="cell sk"></div><div class="cell sk"></div></div>
+                <div class="row">
+                  <div class="cell sk"></div>
+                  <div class="cell sk"></div>
+                </div>
+                <div class="row">
+                  <div class="cell sk"></div>
+                  <div class="cell sk"></div>
+                </div>
+                <div class="row">
+                  <div class="cell sk"></div>
+                  <div class="cell sk"></div>
+                </div>
+                <div class="row">
+                  <div class="cell sk"></div>
+                  <div class="cell sk"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -86,17 +183,146 @@
     <!-- Section 2: About + How-to video (Plyr, elegant theme) -->
     <section id="about" class="section section-about">
       <div class="container reveal">
-        <h2>What is Tower Blocks?</h2>
+        <h1>What is Tower Blocks?</h1>
         <p class="about-text">
-          A fast, minimalist block–stacker. Tap with precision to align each block, build higher, and rack up points. Simple to learn. Hard to perfect.
+          A fast, minimalist block–stacker. Tap with precision to align each
+          block, build higher, and rack up points. Simple to learn. Hard to
+          perfect.
         </p>
 
         <ul class="about-points">
           <li>Fast, satisfying gameplay loop</li>
           <li>Global leaderboard and personal bests</li>
-          <li>Performance-focused </li>
+          <li>Performance-focused</li>
         </ul>
 
+        <!-- Add this once in your <head> if not already included -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+
+        <h2>Source code</h2>
+        <div class="about-panel with-gradient-border">
+          <ul class="about-points1 code-links">
+            <li>
+              <a
+                href="https://github.com/taubyte/example-games-tower-blocks"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github"></i> Frontend code
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/taubyte/example-games-tower-blocks-backend"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github"></i> Backend code
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <h2>Stack</h2>
+        <div class="about-panel with-gradient-border">
+          <ul class="about-points tech-list">
+            <li>
+              <span class="tech-icon">
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg"
+                  alt="Golang"
+                  width="20"
+                  height="20"
+                />
+              </span>
+              <a href="https://go.dev" target="_blank" rel="noopener noreferrer"
+                >Golang</a
+              >
+            </li>
+            <li>
+              <span class="tech-icon">
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+                  alt="TypeScript"
+                  width="20"
+                  height="20"
+                />
+              </span>
+              <a
+                href="https://www.typescriptlang.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >TypeScript</a
+              >
+            </li>
+            <li>
+              <span class="tech-icon">
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/threejs/threejs-original.svg"
+                  alt="Three.js"
+                  width="20"
+                  height="20"
+                />
+              </span>
+              <a
+                href="https://threejs.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Three.js</a
+              >
+            </li>
+            <li>
+              <span class="tech-icon">
+                <img src="assets/taubyte.png" alt="Taubyte" height="20" />
+              </span>
+              <a
+                href="https://taubyte.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Taubyte</a
+              >
+            </li>
+            <li>
+              <span class="tech-icon">
+                <img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/book.png"
+                  alt="Docs"
+                  width="20"
+                  height="20"
+                />
+              </span>
+              <a
+                href="https://tau.how"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Docs</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <style>
+          .about-points a {
+            color: #8ecaff; /* soft blue for dark background */
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease, text-shadow 0.2s ease;
+          }
+
+          .about-points a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 6px #8ecaff;
+          }
+
+          .about-points a:active {
+            color: #66aee6;
+          }
+        </style>
+
+        <h2>Step-by-step guide into making the game</h2>
         <div class="howto with-gradient-border reveal">
           <div class="player-wrapper">
             <div class="plyr__video-embed" id="howto-player">
@@ -112,70 +338,35 @@
       </div>
     </section>
 
-    
-
-    
     <footer class="footer">
       <div class="container">
         <span>© <span id="year"></span> Taubyte. All rights reserved.</span>
-        <div class="links">
-          <span>Source Code: </span>
-          <a href="https://github.com/taubyte/example-games-tower-blocks" target="_blank">Frontend</a>
-          <span class="divider">|</span>
-          <a href="https://github.com/taubyte/example-games-tower-blocks-backend" target="_blank">Backend</a>
-        </div>
       </div>
     </footer>
-    
+
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    
-    <style>
-      .footer {
-        background: #111827; /* dark gray */
-        color: #e5e7eb; /* light gray */
-        padding: 20px 0;
-        text-align: center;
-        font-size: 14px;
-        border-top: 1px solid #1f2937;
-      }
-    
-      .footer .container {
-        max-width: 900px;
-        margin: 0 auto;
-      }
-    
-      .footer .links {
-        margin-top: 8px;
-      }
-    
-      .footer a {
-        color: #60a5fa; /* nice blue */
-        text-decoration: none;
-        transition: color 0.2s ease-in-out;
-        font-weight: 500;
-      }
-    
-      .footer a:hover {
-        color: #93c5fd;
-      }
-    
-      .footer .divider {
-        margin: 0 8px;
-        color: #9ca3af;
-      }
-    </style>
-    
-    
 
     <!-- Full leaderboard modal -->
     <div id="board-modal" class="modal" aria-hidden="true">
       <div class="modal-backdrop" data-close="modal"></div>
-      <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div
+        class="modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
         <div class="modal-header">
           <h3 id="modal-title">Full Leaderboard</h3>
-          <button class="modal-close" type="button" aria-label="Close" data-close="modal">×</button>
+          <button
+            class="modal-close"
+            type="button"
+            aria-label="Close"
+            data-close="modal"
+          >
+            ×
+          </button>
         </div>
         <div class="modal-body" id="modal-body">
           <div class="board board-modal"></div>
@@ -186,6 +377,4 @@
     <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.polyfilled.min.js"></script>
     <script src="script.js"></script>
   </body>
-  </html>
-
-
+</html>
