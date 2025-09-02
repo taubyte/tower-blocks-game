@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tower Blocks — Play Now.</title>
+    <meta name="description" content="Tower Blocks: a block-stacking web game with a global online leaderboard, how-to video, and project links." />
+    <meta property="og:title" content="Tower Blocks — Stack higher. Score higher." />
+    <meta property="og:description" content="Compete on the global leaderboard and learn how it's built." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://9uaqltej2.g.k8s.cyou" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://www.youtube-nocookie.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Plyr: elegant, accessible media player -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.css" />
+  </head>
+  <body>
+    <div class="global-ornaments" aria-hidden="true"></div>
+
+    <!-- Floating action button for external links -->
+    <div class="fab-container" aria-label="Quick links">
+      <button id="fab-toggle" class="fab" aria-expanded="false" aria-controls="fab-menu" aria-label="Open links">▲</button>
+      <div id="fab-menu" class="fab-menu" role="menu">
+        <a role="menuitem" class="fab-link" href="https://github.com/taubyte" target="_blank" rel="noopener noreferrer">🐙 GitHub ↗</a>
+        <a role="menuitem" class="fab-link" href="https://www.youtube.com/@taubyte" target="_blank" rel="noopener noreferrer">▶️ YouTube ↗</a>
+        <a role="menuitem" class="fab-link" href="https://tau.how" target="_blank" rel="noopener noreferrer">📚 Docs ↗</a>
+        <a role="menuitem" class="fab-link" href="https://taubyte.com" target="_blank" rel="noopener noreferrer">🌐 Website ↗</a>
+      </div>
+    </div>
+
+    <!-- Section 1: Hero with dimmed gameplay video background -->
+    <section id="hero" class="section section-hero">
+      <div class="video-bg">
+        <video id="bg-video" playsinline autoplay muted loop preload="auto" poster="poster.jpg" aria-hidden="true">
+          <!-- Placeholder video; replace with your gameplay video URL or local file -->
+          <source src="https://cdn.coverr.co/videos/coverr-sunlight-through-trees-1448/1080p.mp4" type="video/mp4" />
+          <source src="https://cdn.coverr.co/videos/coverr-sunlight-through-trees-1448/1080p.webm" type="video/webm" />
+        </video>
+        <div class="video-overlay"></div>
+      </div>
+      <div class="container hero-content reveal">
+        <h1 class="title">Tower Blocks</h1>
+        <p class="subtitle">Stack higher. Score higher. Climb the global leaderboard.</p>
+        <div class="hero-grid">
+          <div class="play-card with-gradient-border reveal">
+            <div class="play-card-video" aria-hidden="true">
+              <video playsinline autoplay muted loop preload="auto">
+                <source src="bg.mov" type="video/quicktime" />
+              </video>
+              <div class="play-card-dim"></div>
+            </div>
+            <div class="play-card-inner">
+              <h2>Ready to Play?</h2>
+              <p class="play-card-text">Stack blocks with perfect timing and climb the board.</p>
+              <a class="btn btn-lg primary ripple-container" href="https://9uaqltej2.g.k8s.cyou/" target="_blank" rel="noopener noreferrer">Play Now</a>
+            </div>
+          </div>
+          <div class="leaderboard with-gradient-border reveal" id="leaderboard">
+            <h2>Global Leaderboard</h2>
+            <div class="board-actions">
+              <button class="btn small ghost" id="refresh-board" type="button">Refresh</button>
+              <button class="btn small ghost" id="view-full-board" type="button">View full board</button>
+            </div>
+            <div id="leaderboard-content" class="board">
+              <div class="skeleton">
+                <div class="row"><div class="cell sk"></div><div class="cell sk"></div></div>
+                <div class="row"><div class="cell sk"></div><div class="cell sk"></div></div>
+                <div class="row"><div class="cell sk"></div><div class="cell sk"></div></div>
+                <div class="row"><div class="cell sk"></div><div class="cell sk"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: About + How-to video (Plyr, elegant theme) -->
+    <section id="about" class="section section-about">
+      <div class="container reveal">
+        <h2>What is Tower Blocks?</h2>
+        <p class="about-text">
+          A fast, minimalist block–stacker. Tap with precision to align each block, build higher, and rack up points. Simple to learn. Hard to perfect.
+        </p>
+
+        <ul class="about-points">
+          <li>Fast, satisfying gameplay loop</li>
+          <li>Global leaderboard and personal bests</li>
+          <li>Performance-focused </li>
+        </ul>
+
+        <div class="howto with-gradient-border reveal">
+          <div class="player-wrapper">
+            <div class="plyr__video-embed" id="howto-player">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/gMTYh-gQLgA?origin=https%3A%2F%2Fexample.com&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&vq=hd1080"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                title="How to create the game"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    
+
+    <footer class="footer">
+      <div class="container">
+        <span>© <span id="year"></span> Tower Blocks. All rights reserved.</span>
+      </div>
+    </footer>
+
+    <!-- Full leaderboard modal -->
+    <div id="board-modal" class="modal" aria-hidden="true">
+      <div class="modal-backdrop" data-close="modal"></div>
+      <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-header">
+          <h3 id="modal-title">Full Leaderboard</h3>
+          <button class="modal-close" type="button" aria-label="Close" data-close="modal">×</button>
+        </div>
+        <div class="modal-body" id="modal-body">
+          <div class="board board-modal"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.polyfilled.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+
