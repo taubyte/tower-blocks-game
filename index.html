@@ -26,7 +26,7 @@
 
     <!-- Floating action button for external links -->
     <div class="fab-container" aria-label="Quick links">
-      <button id="fab-toggle" class="fab" aria-expanded="false" aria-controls="fab-menu" aria-label="Open links">▲</button>
+      <button id="fab-toggle" class="fab" aria-expanded="false" aria-controls="fab-menu" aria-label="Open links">🔗</button>
       <div id="fab-menu" class="fab-menu" role="menu">
         <a role="menuitem" class="fab-link" href="https://github.com/taubyte" target="_blank" rel="noopener noreferrer">🐙 GitHub ↗</a>
         <a role="menuitem" class="fab-link" href="https://www.youtube.com/@taubyte" target="_blank" rel="noopener noreferrer">▶️ YouTube ↗</a>
@@ -52,7 +52,9 @@
           <div class="play-card with-gradient-border reveal">
             <div class="play-card-video" aria-hidden="true">
               <video playsinline autoplay muted loop preload="auto">
-                <source src="bg.mov" type="video/quicktime" />
+                <source src="bg.mp4" type="video/mp4" />
+                <source src="bg.webm" type="video/webm" />
+                Your browser does not support the video tag.
               </video>
               <div class="play-card-dim"></div>
             </div>
@@ -113,12 +115,59 @@
     
 
     
-
     <footer class="footer">
       <div class="container">
-        <span>© <span id="year"></span> Tower Blocks. All rights reserved.</span>
+        <span>© <span id="year"></span> Taubyte. All rights reserved.</span>
+        <div class="links">
+          <span>Source Code: </span>
+          <a href="https://github.com/taubyte/example-games-tower-blocks" target="_blank">Frontend</a>
+          <span class="divider">|</span>
+          <a href="https://github.com/taubyte/example-games-tower-blocks-backend" target="_blank">Backend</a>
+        </div>
       </div>
     </footer>
+    
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    
+    <style>
+      .footer {
+        background: #111827; /* dark gray */
+        color: #e5e7eb; /* light gray */
+        padding: 20px 0;
+        text-align: center;
+        font-size: 14px;
+        border-top: 1px solid #1f2937;
+      }
+    
+      .footer .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+    
+      .footer .links {
+        margin-top: 8px;
+      }
+    
+      .footer a {
+        color: #60a5fa; /* nice blue */
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+        font-weight: 500;
+      }
+    
+      .footer a:hover {
+        color: #93c5fd;
+      }
+    
+      .footer .divider {
+        margin: 0 8px;
+        color: #9ca3af;
+      }
+    </style>
+    
+    
 
     <!-- Full leaderboard modal -->
     <div id="board-modal" class="modal" aria-hidden="true">
